@@ -1,0 +1,83 @@
+<main>
+  <div class="logo">
+    <img src="./logo_painel_constru.png" class="logo-image" />
+    <div class="texts">
+      <h1>Painel</h1>
+      <h1>Constru</h1>
+    </div>
+  </div>
+  <div class="data">
+    <div class="info">
+      <h1>Seja bem vindo!</h1>
+      <p>
+        Para começar, selecione alguns filtros apertando no botão filtros. Logo após, aperte o botão procurar e aguarde
+        a pesquisa.
+      </p>
+    </div>
+    <div class="filters">
+      <div class="filter">
+        <label for="stateInput">Estado</label>
+        <input size="small" type="text" pInputText id="stateInput" [(ngModel)]="stateValue" placeholder="Estado"/>
+      </div>
+      <div class="filter">
+        <label for="cityInput">Cidade</label>
+        <input size="small" type="text" pInputText id="cityInput" [(ngModel)]="cityValue" placeholder="Cidade" />
+      </div>
+      <div class="filter">
+        <label for="radiusInput">Raio de Km</label>
+        <p-inputNumber
+          inputId="minmax"
+          id="radiusInput"
+          placeholder="Raio"
+          [min]="1"
+          [max]="500"
+          required="true"
+          mode="decimal"
+          suffix=" Km"
+          [inputStyle]="{ width: '17rem' }"
+          [(ngModel)]="radiusValue"
+          [showButtons]="true"
+          [size]="'small'"
+        />
+      </div>
+      <div class="filter">
+        <label for="cnaeButton">CNAEs</label>
+        <p-button id="cnaeButton" size="small" [style]="{ width: '20rem', height: '3rem', 'justify-content': 'center'}">Ver CNAEs Selecionados</p-button>
+      </div>
+      <div class="presence-filter">
+        <label for="presenceSlider">Presença Digital</label>
+        <div class="presenceInputs">
+          <p-inputNumber
+            [inputStyle]="{ width: '3rem', 'text-align': 'center'}"
+            inputId="minmax"
+            spinnerMode="vertical"
+            id="presenceInput"
+            readonly="true"
+            placeholder="0"
+            [(ngModel)]="rangeValues[0]"
+            size="small"
+          />
+          <p>até</p>
+          <p-inputNumber
+            [inputStyle]="{ width: '3rem', 'text-align': 'center' }"
+            inputId="minmax"
+            id="presenceInput"
+            placeholder="10"
+            readonly="true"
+            [(ngModel)]="rangeValues[1]"
+            size="small"
+          />
+        </div>
+
+        <p-slider id="presenceSlider" [range]="true" styleClass="w-20rem" [(ngModel)]="rangeValues" max="10" step="1" />
+      </div>
+      <div class="advanced-filter">
+        <button onclick="" id="advancedFilterButton">Ver filtros avançados</button>
+        <p-button id="confirmButton" size="small" [style]="{ width: '20rem', height: '3rem', 'justify-content': 'center'}" [routerLink]="['/dashboard']">Encontrar Empresas</p-button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"></footer>
+  <router-outlet/>
+</main>
+
