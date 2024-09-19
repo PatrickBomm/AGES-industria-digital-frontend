@@ -1,4 +1,3 @@
-
 # Indústria Digital
 
 Bem-vindo ao projeto **Indústria Digital**, desenvolvido com a **Angular CLI versão 18.2.0**. Este guia irá ajudá-lo a configurar, desenvolver e construir o projeto em seu ambiente local.
