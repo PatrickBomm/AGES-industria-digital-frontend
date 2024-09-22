@@ -89,13 +89,13 @@ main {
   margin-bottom: 1rem;
 }
 
-.advanced-filter {
+/* .advanced-filter {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: end;
   height: 100%;
-}
+} */
 
 label {
   font-weight: bold;

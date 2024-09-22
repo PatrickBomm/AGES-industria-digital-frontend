@@ -72,7 +72,8 @@
         <p-slider id="presenceSlider" [range]="true" styleClass="w-20rem" [(ngModel)]="rangeValues" max="10" step="1" />
       </div>
       <div class="advanced-filter">
-        <button onclick="" id="advancedFilterButton">Ver filtros avançados</button>
+        <p-button (onClick)="showAdvancedFilters()" id="advancedFilterButton" [text]="true" label="Ver filtros avançados"></p-button>
+        <app-modal-advanced-filters [open]="openAdvancedFilters"> </app-modal-advanced-filters>
         <p-button id="confirmButton" size="small" [style]="{ width: '20rem', height: '3rem', 'justify-content': 'center'}" [routerLink]="['/dashboard']">Encontrar Empresas</p-button>
       </div>
     </div>
